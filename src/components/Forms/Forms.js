@@ -16,25 +16,23 @@ class  Form  extends React.Component{
 
     }
     increaseCount(currentValue){
-    return {count: currentValue.count + 1}
+        return {count: currentValue.count + this.props.step}
     }
 
     decreaseCount(currentValue){
-        return {count: currentValue.count - 1}
+        return {count: currentValue.count - this.props.step}
     }
     
     handleClickPlus(){
         if(this.state.count < this.state.max){
             this.setState(this.increaseCount)
         }
-       
     }
 
     handleClickMinus(){
         if(this.state.count > this.state.min){
-            this.setState(this.decreaseCount)
-        }
-       
+            this.setState(this.decreaseCount) 
+        }     
     }
 
     render(){
@@ -42,7 +40,7 @@ class  Form  extends React.Component{
         if(this.props.counter){
             classList += " counter"
         }
-    
+
     return (
     <form action="">
         <label htmlFor="">{this.props.label}</label>
@@ -54,5 +52,4 @@ class  Form  extends React.Component{
     )
 }
 }
-
 export default Form;
