@@ -1,0 +1,124 @@
+button{
+    border-radius: 2px;
+    padding: 10px 25px; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+.button-default{
+    background-color: black;
+    border: black;
+}
+
+.button-primary{
+    background-color: #0069D9;
+    border: #0069D9;
+}
+.button-danger{
+    background-color: #E04F5D; 
+    border: #E04F5D;
+
+}
+.button-warning{
+    background-color: #FFC106;
+    border: #FFC106;
+    color: black;
+}
+
+.button-success{
+    background-color:#28A745;
+    border: #28A745;
+}
+.button-primary-light{
+    background-color: rgba(0, 105, 217, 0.338); 
+    color:#0069D9; 
+    border: rgba(0, 105, 217, 0.338); 
+}
+.button-danger-light{
+    background-color: rgba(224, 79, 94, 0.29); 
+    color: #E04F5D;
+    border: rgba(224, 79, 94, 0.29)
+
+}
+.button-warning-light{
+    background-color: rgba(255, 193, 6, 0.324); 
+    color: #FFC106;
+    border: rgba(255, 193, 6, 0.324);
+}
+.button-success-light{
+    background-color: rgba(40, 167, 70, 0.29);
+    color: #28A745;
+    border: rgba(40, 167, 70, 0.29);
+}
+.button-default-light{
+    background-color: rgba(0, 0, 0, 0.198);
+    color: black;
+    border: rgba(0, 0, 0, 0.198);
+}
+
+.button-large{
+    padding: 10px 50px; 
+}
+
+.button-primary:hover{
+background-color: rgba(0, 105, 217, 0.338)
+}
+
+.button-danger:hover{
+    background-color: rgba(224, 79, 94, 0.29); 
+}
+
+.button-warning:hover{
+    background-color: rgba(255, 193, 6, 0.324); 
+}
+
+.button-success:hover{
+    background-color: rgba(40, 167, 70, 0.29);
+    
+}
+.button-default:hover{
+    background-color: rgba(0, 0, 0, 0.198);
+}
+
+
+.button-outline{
+   background-color: white;
+}
+
+.border-primary{
+    border: 1px solid #0069D9;
+    color: #0069D9;
+}
+.border-danger{
+    border: 1px solid #E04F5D;
+    color: #E04F5D;
+}
+.border-warning{
+    border: 1px solid #FFC106;
+    color: #FFC106;
+}
+.border-success{
+    border:1px solid #28A745;
+    color: #28A745;
+}
+.border-default{
+    border:1px solid black;
+    color: black;
+}
+
+.icon{
+padding: 10px;
+display: flex;
+justify-content: space-around;
+}
+.symbol{
+    margin-right: 7px;
+}
+.icon-solo{
+    width: 30px;
+    padding: 0 0 0 7px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
