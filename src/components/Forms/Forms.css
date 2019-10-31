@@ -1,3 +1,15 @@
 .counter{
     background-color: #F6F7F8;
 }
+.hide{
+    display: none;
+}
+.submit {
+    visibility: hidden;
+}
+.email{
+    visibility: hidden;
+}
+.select{
+    visibility: hidden;
+}

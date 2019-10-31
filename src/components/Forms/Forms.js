@@ -13,7 +13,6 @@ class  Form  extends React.Component{
         this.increaseCount = this.increaseCount.bind(this);
         this.handleClickPlus = this.handleClickPlus.bind(this); 
         this.handleClickMinus = this.handleClickMinus.bind(this);
-
     }
     increaseCount(currentValue){
         return {count: currentValue.count + this.props.step}
@@ -40,14 +39,14 @@ class  Form  extends React.Component{
         if(this.props.counter){
             classList += " counter"
         }
+       
 
     return (
     <form action="">
         <label htmlFor="">{this.props.label}</label>
-        <input type={this.props.type} value={this.props.minus} className={classList} onClick = {this.handleClickMinus}/>
-        <span className={classList}>{this.state.count}</span>
-        {/* <input type={this.props.type} placeholder={this.props.placeholder} value={this.state.count} onClick={this.increaseCount}/> */}
-        <input type={this.props.type} value={this.props.plus} className={classList} onClick = {this.handleClickPlus}/>
+        <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
+        <span className="counter">{this.state.count}</span>
+        <input type={this.props.type} value={this.props.plus} className={this.props.hidden}onClick = {this.handleClickPlus}/>
     </form>
     )
 }
