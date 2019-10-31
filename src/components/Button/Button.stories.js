@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import './Button.css';
 import Button from './Button';
-import cart from './cart_2.png';
-import heart from './hearts.png';
+import cart from './cart.svg';
+import heart from './hearts.svg';
 
 
 storiesOf('Button', module)
