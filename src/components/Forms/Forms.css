@@ -1,0 +1,16 @@
+label{
+    font-family: Arial;
+    font-size: 12px;
+}
+input{
+    height: 16px;
+    padding: 5px;
+}
+.medium-form{
+    height: 20px;
+    padding: 5px;
+}
+.large-form{
+    height: 25px;
+    padding: 5px;
+}
