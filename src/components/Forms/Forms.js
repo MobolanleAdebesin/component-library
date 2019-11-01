@@ -9,11 +9,14 @@ class  Form  extends React.Component{
         this.state = {
             count: this.props.value,
             max: this.props.max, 
-            min: this.props.min
+            min: this.props.min, 
+            color: "papaya"
         }
         this.increaseCount = this.increaseCount.bind(this);
         this.handleClickPlus = this.handleClickPlus.bind(this); 
         this.handleClickMinus = this.handleClickMinus.bind(this);
+        this.handleCeck = this.handleCheck.bind(this);
+        this.changeBackground = this.changeBackground.bind(this);
     }
     increaseCount(currentValue){
         return {count: currentValue.count + this.props.step}
@@ -35,17 +38,41 @@ class  Form  extends React.Component{
         }     
     }
 
-    render(){
-        let classList = " "
-        if(this.props.counter){
-            classList += " counter"
+    handleCheck(){
+        if (this.state.checked === false) {
+            this.setState({checked: true})
+            console.log(this.state.checked)
+        } else {
+            this.setState({checked: false})
+            console.log(this.state.checked)
         }
-        if(this.props.type == "button"){
+    }
+    changeBackground(evt){
+        evt.preventDefault();
+        let classList = "checkmark-blue";
+        return classList += " checkmark-blue papaya";
+    }
+
+
+    render(){
+    
+        if(this.props.type == "checkbox"){
+
+            
+            return(
+                <div>
+                   
+                </div>
+                
+            )
+        }
+        
+        else if(this.props.type == "button"){
             return(
             <form action="">
             <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
             <span className="counter">{this.state.count}</span>
-            <input type={this.props.type} value={this.props.plus} className={this.props.hidden}onClick = {this.handleClickPlus}/>
+            <input type={this.props.type} value={this.props.plus} className={this.props.hidden} onClick = {this.handleClickPlus}/>
         </form>
             )
         }
@@ -66,7 +93,6 @@ class  Form  extends React.Component{
                     
                 </form>
             )
-
         }
         else if(this.props.type == "select"){
             return(
@@ -75,31 +101,6 @@ class  Form  extends React.Component{
                         <option value="">Select</option>
                     </select>
                 </form>
-            )
-        }
-        else if(this.props.type == "checkbox"){
-            return(
-                <div>
-                    <label className= "container noWords" htmlFor="">
-                        <input type={this.props.type} />
-                        <span className = "checkmark-blue"></span>
-                        Words
-                    </label>
-
-                    <label className= "container noWords" htmlFor="">
-                        <input type={this.props.type}/>
-                        <span className = "checkmark-black"></span>
-                        Words
-                    </label>
-                    
-
-                    <label className= "container" htmlFor="">
-                        <input type={this.props.type} checked={this.props.checked}/>
-                        <span className = "checkmark-black"></span>
-                        {this.props.label}
-                    </label>
-                </div>
-                
             )
         }
     

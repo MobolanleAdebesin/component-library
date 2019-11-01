@@ -1,0 +1,38 @@
+.Thumbnail{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #F6F7F8 4px solid;
+    width: 270px;
+    height: 350px;
+}
+.Thumbnail-image{
+    background: url('./Apple Macbook Pro.png') no-repeat;
+    height: 250px;
+    width: 250px;
+    margin: 1rem;
+}
+.Thumbnail-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.Thumbnail-stars{
+    margin: 1rem 0 0.5rem 2rem;
+}
+
+.Thumbnail-price{
+    margin: 0 0 2rem 1.5rem;
+}
+
+.Thumbnail-image:hover{
+    opacity: 0.5;
+    background: url('./hover5.svg');
+}
+
+
+
