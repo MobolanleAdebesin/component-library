@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Arrow from './arrow down.svg';
+
 
 
 // This is a functional component - just sent up a little differently as an arrow function!
@@ -40,23 +40,66 @@ class  Form  extends React.Component{
         if(this.props.counter){
             classList += " counter"
         }
-        if(this.props.type !== "select"){
+        if(this.props.type == "button"){
             return(
             <form action="">
-            <label htmlFor="">{this.props.label}</label>
             <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
             <span className="counter">{this.state.count}</span>
             <input type={this.props.type} value={this.props.plus} className={this.props.hidden}onClick = {this.handleClickPlus}/>
         </form>
             )
         }
-        else{
+        else if(this.props.type == "text" && this.props.placeholder == "Voucher Code"){
+            return(
+            <form action="">
+                    <input type={this.props.type} placeholder="Voucher Code"/>
+                    <input className ="redeem"value="Redeem Code"type="submit"/>
+                </form>
+                )
+        }
+
+        else if(this.props.type == "text"){
+            return(
+                <form action="">
+                    <label htmlFor="">{this.props.label}</label>
+                    <input type={this.props.type} placeholder={this.props.placeholder}/>
+                    
+                </form>
+            )
+
+        }
+        else if(this.props.type == "select"){
             return(
                 <form action="">
                     <select name = {this.props.name} className = {this.props.special} id="">
                         <option value="">Select</option>
                     </select>
                 </form>
+            )
+        }
+        else if(this.props.type == "checkbox"){
+            return(
+                <div>
+                    <label className= "container" htmlFor="">
+                        <input type={this.props.type} />
+                        <span className = "checkmark"></span>
+                        {this.props.label}
+                    </label>
+
+                    <label className= "container" htmlFor="">
+                        <input type={this.props.type} checked={this.props.checked}/>
+                        <span className = "checkmark"></span>
+                        {this.props.label}
+                    </label>
+                    
+
+                    <label className= "container" htmlFor="">
+                        <input type={this.props.type} checked={this.props.checked}/>
+                        <span className = "checkmark"></span>
+                        {this.props.label}
+                    </label>
+                </div>
+                
             )
         }
     
