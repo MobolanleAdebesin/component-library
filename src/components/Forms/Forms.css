@@ -61,33 +61,62 @@
     height: 0;
     width: 0;
 }
-.checkmark{
+.checkmark-black{
     position: absolute;
     top: 0;
     left: 0;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #eee;
-    border: blue 2px solid;
-    
+    background-color: #FFFFFF; 
+    border: black 2px solid; 
+    border-radius: 5px;
 }
-.container:hover input ~ .checkmark{
+
+.checkmark-blue{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #FFFFFF;  
+    border: #33A0FF 2px solid;
+    border-radius: 5px;
+}
+
+
+.container:hover input ~ .checkmark-blue {
     background-color: #ccc; 
 }
 
-.container input:checked ~ .checkmark{
+.container:hover input ~ .checkmark-black {
+    background-color: #ccc; 
+}
+
+.container input:checked ~ .checkmark-blue{
     background-color: #2196F3;
 }
-.checkmark:after{
+.container input:checked ~ .checkmark-black{
+    background-color: black;
+}
+.checkmark-blue:after{
     content: ""; 
     position: absolute;
     display: none;
 }
-.container input:checked ~ .checkmark:after{
+.checkmark-black:after{
+    content: ""; 
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark-blue:after{
+    display: block;
+}
+.container input:checked ~ .checkmark-black:after{
     display: block;
 }
 
-.container .checkmark:after{
+.container .checkmark-blue:after{
     left: 0.6rem; 
     top: 0.3rem;
     width: 0.3rem;
@@ -97,4 +126,18 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.container .checkmark-black:after{
+    left: 0.6rem; 
+    top: 0.3rem;
+    width: 0.3rem;
+    height:0.6rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.noWords{
+    color: white;
 }

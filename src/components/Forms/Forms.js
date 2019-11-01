@@ -80,22 +80,22 @@ class  Form  extends React.Component{
         else if(this.props.type == "checkbox"){
             return(
                 <div>
-                    <label className= "container" htmlFor="">
+                    <label className= "container noWords" htmlFor="">
                         <input type={this.props.type} />
-                        <span className = "checkmark"></span>
-                        {this.props.label}
+                        <span className = "checkmark-blue"></span>
+                        Words
                     </label>
 
-                    <label className= "container" htmlFor="">
-                        <input type={this.props.type} checked={this.props.checked}/>
-                        <span className = "checkmark"></span>
-                        {this.props.label}
+                    <label className= "container noWords" htmlFor="">
+                        <input type={this.props.type}/>
+                        <span className = "checkmark-black"></span>
+                        Words
                     </label>
                     
 
                     <label className= "container" htmlFor="">
                         <input type={this.props.type} checked={this.props.checked}/>
-                        <span className = "checkmark"></span>
+                        <span className = "checkmark-black"></span>
                         {this.props.label}
                     </label>
                 </div>
