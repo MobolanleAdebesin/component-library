@@ -8,7 +8,7 @@
     height: 350px;
 }
 .Thumbnail-image{
-    background: url('./Apple Macbook Pro.png') no-repeat;
+    background: url('./Images/Apple Macbook Pro.png') no-repeat;
     height: 250px;
     width: 250px;
     margin: 1rem;
@@ -31,7 +31,7 @@
 
 .Thumbnail-image:hover{
     opacity: 0.5;
-    background: url('./hover5.svg');
+    background: url('./Images/Overlay.svg');
 }
 
 

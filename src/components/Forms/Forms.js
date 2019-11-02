@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 
 
 
-// This is a functional component - just sent up a little differently as an arrow function!
+
 class  Form  extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             count: this.props.value,
             max: this.props.max, 
-            min: this.props.min, 
-            color: "papaya"
+            min: this.props.min,
+            classList: this.props.checkmark
         }
+        
+        
         this.increaseCount = this.increaseCount.bind(this);
         this.handleClickPlus = this.handleClickPlus.bind(this); 
         this.handleClickMinus = this.handleClickMinus.bind(this);
-        this.handleCeck = this.handleCheck.bind(this);
-        this.changeBackground = this.changeBackground.bind(this);
+        this.handleCheck = this.handleCheck.bind(this); 
     }
     increaseCount(currentValue){
         return {count: currentValue.count + this.props.step}
@@ -37,34 +38,25 @@ class  Form  extends React.Component{
             this.setState(this.decreaseCount) 
         }     
     }
-
-    handleCheck(){
-        if (this.state.checked === false) {
-            this.setState({checked: true})
-            console.log(this.state.checked)
-        } else {
-            this.setState({checked: false})
-            console.log(this.state.checked)
-        }
-    }
-    changeBackground(evt){
+    handleCheck(evt){
         evt.preventDefault();
-        let classList = "checkmark-blue";
-        return classList += " checkmark-blue papaya";
-    }
+        this.setState({classList: this.props.checkmark + " checked"});
+        
+        
 
+    }
 
     render(){
-    
+    console.log(this.state.checkmark);
         if(this.props.type == "checkbox"){
+           return(
+               <label htmlFor="">
+                   <span className= {this.state.classList} onClick = {this.handleCheck}>
 
+                   </span>
+               </label>
+           )
             
-            return(
-                <div>
-                   
-                </div>
-                
-            )
         }
         
         else if(this.props.type == "button"){
