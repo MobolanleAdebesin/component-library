@@ -55,7 +55,7 @@
     -ms-user-select: none;
     user-select: none;
 }
-.checkmark{
+.checkmark-blue{
 	position: absolute;
 	top: 0; 
 	left: 0; 
@@ -64,7 +64,7 @@
 	border: solid 3px #33A0FF; 
 	border-radius: 6px;
 }
-/* .checkmark-black{
+.checkmark-black{
 	position: absolute;
 	top: 0; 
 	left: 0; 
@@ -72,12 +72,12 @@
 	width: 1.1rem;
 	border: solid 3px black; 
 	border-radius: 6px;
-} */
+}
 .checked{
 	background: url('./blue-checkbox.svg')
 }
-/* .checked-black{
-	border: solid 3px black;
+
+.checked-black{
 	background: url('./checkbox black.svg')
 
-} */
+}

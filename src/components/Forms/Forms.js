@@ -15,7 +15,8 @@ class  Form  extends React.Component{
             classList: this.props.checkmark,
             checked: this.props.checked,
             checkbox: " checked",
-            checkbox2: ""
+            checkbox2: "",
+            checkboxBlack: " checked-black"
         }
         
         
@@ -45,38 +46,59 @@ class  Form  extends React.Component{
     }
     handleCheck(evt){
         evt.preventDefault();
-        if(this.state.checked === true){
+        if(this.state.checked == true && this.props.color == " black"){
+            this.setState({checkboxBlack: ""});
+            this.setState({checkbox2: " checked-black"});
+            this.setState({checked: false});
+        }
+        else if(this.state.checked == false && this.props.color == " black"){
+            this.setState({checkboxBlack: " checked-black"});
+            this.setState({checkbox2: ""});
+            this.setState({checked: true});
+        }   
+
+        if(this.state.checked == true && this.props.color == " blue"){
             this.setState({checkbox: ""});
             this.setState({checkbox2: " checked"});
             this.setState({checked: false});
         }
-        else if(this.state.checked === false){
+        else if(this.state.checked == false && this.props.color == " blue"){
             this.setState({checkbox: " checked"});
             this.setState({checkbox2: ""});
             this.setState({checked: true});
-        }
+        } 
         
-        
-
     }
 
     render(){
     console.log(this.state.checkmark);
         if(this.props.type == "checkbox"){
             if(this.props.checked){
+                if(this.props.color == " blue"){
+                    return(
+                        <label className = "checkbox-container" htmlFor="">
+                            <span className= {this.props.checkmark  + this.state.checkbox} onClick = {this.handleCheck}>
+                            </span>
+                            {this.props.label}
+                        </label>
+                    )
+            }
+            else if(this.props.color == " black"){
                 return(
                     <label className = "checkbox-container" htmlFor="">
-                        <span className= {this.state.classList  + this.state.checkbox + this.props.color} onClick = {this.handleCheck}>
+                        <span className= {this.props.checkmark  + this.state.checkboxBlack} onClick = {this.handleCheck}>
                         </span>
                         {this.props.label}
                     </label>
                 )
 
             }
+
+        }
             
             else if(this.props.checked == false){
                 return(<label className = "checkbox-container"htmlFor="">
-                        <span className= {this.state.classList + this.state.checkbox2 + this.props.color} onClick = {this.handleCheck}>
+                        <span className= {this.props.checkmark + this.state.checkbox2} onClick = {this.handleCheck}>
                         </span>
                         {this.props.label}
                     </label>
