@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import './Forms.css';
 import Form from './Forms';
-import arrowDown from './arrow down.png'
+
 
 storiesOf('Forms', module)
 .add('Submit Button', () => <Form type = "text" placeholder="Voucher Code" />)

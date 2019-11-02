@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import { timingSafeEqual } from 'crypto';
-import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/styles/hljs';
-
-
-
-
+import {ReactComponent as Plus} from './Plus.svg';
+import {ReactComponent as Minus} from './Minus.svg';
 class  Form  extends React.Component{
     constructor(props){
         super(props)
@@ -18,8 +14,6 @@ class  Form  extends React.Component{
             checkbox2: "",
             checkboxBlack: " checked-black"
         }
-        
-        
         this.increaseCount = this.increaseCount.bind(this);
         this.handleClickPlus = this.handleClickPlus.bind(this); 
         this.handleClickMinus = this.handleClickMinus.bind(this);
@@ -66,8 +60,7 @@ class  Form  extends React.Component{
             this.setState({checkbox: " checked"});
             this.setState({checkbox2: ""});
             this.setState({checked: true});
-        } 
-        
+        }   
     }
 
     render(){
@@ -91,9 +84,7 @@ class  Form  extends React.Component{
                         {this.props.label}
                     </label>
                 )
-
             }
-
         }
             
             else if(this.props.checked == false){
@@ -103,19 +94,20 @@ class  Form  extends React.Component{
                         {this.props.label}
                     </label>
                 )
-
             }
-          
-            
         }
-        
         else if(this.props.type == "button"){
             return(
-            <form action="">
-            <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
-            <span className="counter">{this.state.count}</span>
-            <input type={this.props.type} value={this.props.plus} className={this.props.hidden} onClick = {this.handleClickPlus}/>
-        </form>
+        //     <form action="">
+        //     <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
+        //     <span className="counter">{this.state.count}</span>
+        //     <input type={this.props.type} value={this.props.plus} className={this.props.hidden} onClick = {this.handleClickPlus}/>
+        // </form>
+                <div className = "counter">
+                    <Minus className = "plus" onClick = {this.handleClickMinus}></Minus>
+                    {this.state.count}
+                    <Plus className = "minus" onClick = {this.handleClickPlus}></Plus>
+                </div>
             )
         }
         else if(this.props.type == "text" && this.props.placeholder == "Voucher Code"){
@@ -126,7 +118,6 @@ class  Form  extends React.Component{
                 </form>
                 )
         }
-
         else if(this.props.type == "text"){
             return(
                 <form action="">
@@ -144,8 +135,7 @@ class  Form  extends React.Component{
                     </select>
                 </form>
             )
-        }
-    
+        }   
 }
 }
 export default Form;
