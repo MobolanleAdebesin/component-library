@@ -64,9 +64,20 @@
 	border: solid 3px #33A0FF; 
 	border-radius: 6px;
 }
+/* .checkmark-black{
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	height: 1.1rem; 
+	width: 1.1rem;
+	border: solid 3px black; 
+	border-radius: 6px;
+} */
 .checked{
 	background: url('./blue-checkbox.svg')
 }
-.papaya{
-	border: solid 3px red;
-}
+/* .checked-black{
+	border: solid 3px black;
+	background: url('./checkbox black.svg')
+
+} */

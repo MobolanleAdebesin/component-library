@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { timingSafeEqual } from 'crypto';
+import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/styles/hljs';
 
 
 
@@ -10,7 +12,10 @@ class  Form  extends React.Component{
             count: this.props.value,
             max: this.props.max, 
             min: this.props.min,
-            classList: this.props.checkmark
+            classList: this.props.checkmark,
+            checked: this.props.checked,
+            checkbox: " checked",
+            checkbox2: ""
         }
         
         
@@ -40,7 +45,16 @@ class  Form  extends React.Component{
     }
     handleCheck(evt){
         evt.preventDefault();
-        this.setState({classList: this.props.checkmark + " checked"});
+        if(this.state.checked === true){
+            this.setState({checkbox: ""});
+            this.setState({checkbox2: " checked"});
+            this.setState({checked: false});
+        }
+        else if(this.state.checked === false){
+            this.setState({checkbox: " checked"});
+            this.setState({checkbox2: ""});
+            this.setState({checked: true});
+        }
         
         
 
@@ -49,13 +63,27 @@ class  Form  extends React.Component{
     render(){
     console.log(this.state.checkmark);
         if(this.props.type == "checkbox"){
-           return(
-               <label htmlFor="">
-                   <span className= {this.state.classList} onClick = {this.handleCheck}>
+            if(this.props.checked){
+                return(
+                    <label className = "checkbox-container" htmlFor="">
+                        <span className= {this.state.classList  + this.state.checkbox + this.props.color} onClick = {this.handleCheck}>
+                        </span>
+                        {this.props.label}
+                    </label>
+                )
 
-                   </span>
-               </label>
-           )
+            }
+            
+            else if(this.props.checked == false){
+                return(<label className = "checkbox-container"htmlFor="">
+                        <span className= {this.state.classList + this.state.checkbox2 + this.props.color} onClick = {this.handleCheck}>
+                        </span>
+                        {this.props.label}
+                    </label>
+                )
+
+            }
+          
             
         }
         
