@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {ReactComponent as Plus} from './Plus.svg';
 import {ReactComponent as Minus} from './Minus.svg';
+import {ReactComponent as Redeem} from './redeem-button.svg';
+import redeem from './redeem-button.svg';
 class  Form  extends React.Component{
     constructor(props){
         super(props)
@@ -12,12 +14,14 @@ class  Form  extends React.Component{
             checked: this.props.checked,
             checkbox: " checked",
             checkbox2: "",
-            checkboxBlack: " checked-black"
+            checkboxBlack: " checked-black", 
+            value: ""
         }
         this.increaseCount = this.increaseCount.bind(this);
         this.handleClickPlus = this.handleClickPlus.bind(this); 
         this.handleClickMinus = this.handleClickMinus.bind(this);
         this.handleCheck = this.handleCheck.bind(this); 
+  
     }
     increaseCount(currentValue){
         return {count: currentValue.count + this.props.step}
@@ -62,6 +66,7 @@ class  Form  extends React.Component{
             this.setState({checked: true});
         }   
     }
+   
 
     render(){
     console.log(this.state.checkmark);
@@ -98,11 +103,6 @@ class  Form  extends React.Component{
         }
         else if(this.props.type == "button"){
             return(
-        //     <form action="">
-        //     <input type={this.props.type} value={this.props.minus} placeholder={this.props.placeholder} onClick = {this.handleClickMinus} />
-        //     <span className="counter">{this.state.count}</span>
-        //     <input type={this.props.type} value={this.props.plus} className={this.props.hidden} onClick = {this.handleClickPlus}/>
-        // </form>
                 <div className = "counter">
                     <Minus className = "plus" onClick = {this.handleClickMinus}></Minus>
                     {this.state.count}
@@ -111,26 +111,55 @@ class  Form  extends React.Component{
             )
         }
         else if(this.props.type == "text" && this.props.placeholder == "Voucher Code"){
-            return(
-            <form action="">
-                    <input type={this.props.type} placeholder="Voucher Code"/>
-                    <input className ="redeem"value="Redeem Code"type="submit"/>
-                </form>
-                )
+            let classList = "redeem "; 
+            if(this.props.large){
+                classList += " large"
+            }
+                return(
+                    <form>
+                        <div className = {classList + " redeem-container"}>
+                               <input className="redeem-text" type={this.props.type} placeholder= {this.props.placeholder}/>
+                                <button className= "redeem-button">{this.props.buttonText} </button> 
+                            </div>
+                        </form>
+                    )
         }
         else if(this.props.type == "text"){
+            let classList = " "
+            if(this.props.reg){
+                classList += " reg-selector"
+            }
+            if(this.props.reg){
+                classList += " reg-email"
+            }
+            if(this.props.medium){
+                classList += " medium-email"
+            }
+            if(this.props.large){
+                classList += " large-email"
+            }
+            
             return(
-                <form action="">
-                    <label htmlFor="">{this.props.label}</label>
-                    <input type={this.props.type} placeholder={this.props.placeholder}/>
-                    
+                <form>
+                    <label>{this.props.label}</label> <br/>
+                    <input type={this.props.type} placeholder={this.props.placeholder} className = {classList} />  
                 </form>
             )
         }
         else if(this.props.type == "select"){
+            let classList = ""
+            if(this.props.gray){
+                classList += " select-gray"
+            }
+            if(this.props.large){
+                classList += " select-large"
+            }
+            if(this.props.medium){
+                classList += " select-medium"
+            }
             return(
-                <form action="">
-                    <select name = {this.props.name} className = {this.props.special} id="">
+                <form>
+                    <select name = {this.props.name} className = {this.props.special + classList} id="">
                         <option value="">Select</option>
                     </select>
                 </form>
