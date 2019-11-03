@@ -1,7 +1,10 @@
 {
-  "name": "component-library",
+  "name": "component-library-adebesin",
   "version": "0.1.0",
-  "private": true,
+  "description": "A component library for access to commonly used components.",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "private": false,
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -15,8 +18,20 @@
     "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook"
   },
+  "keywords":[
+    "components",
+    "library"
+  ],
+  "author": "Mobolanle Adebesin",
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/MobolanleAdebesin/component-library.git"
+  },
+  "bugs":{
+    "url": "https://github.com/MobolanleAdebesin/component-library/issues"
   },
   "browserslist": {
     "production": [
