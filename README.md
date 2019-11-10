@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Component Library 
+## Purpose 
+The Purpose of this project was to create a component library of commonly used components including: buttons, thumbnails, and forms. Now, users have access to an array of components that can be reused and modified for varius websites. The design of the components are based on entirely from mockups. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Deployed Site 
 
-### `npm start`
+My website can be accessed [here](https://agitated-austin-92807a.netlify.com/?path=/story/button--primary) on netlify. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built Using 
+- HTML 
+- CSS 
+- JavaScript 
+- React 
+- Storybook 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Examples 
 
-### `npm test`
+![Counter](https://github.com/MobolanleAdebesin/component-library/blob/master/Counter.png)
+![Select Form](https://github.com/MobolanleAdebesin/component-library/blob/master/Select%20Form.png)
+![Thumbnail](https://github.com/MobolanleAdebesin/component-library/blob/master/Thumbnail.png)
+![Thumbnail Hover](https://github.com/MobolanleAdebesin/component-library/blob/master/Thumbnail%20Hover.png)
+<br>
+![Primary Button](https://github.com/MobolanleAdebesin/component-library/blob/master/Primary%20Button.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Accessing the Library 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the terminal, use the command npm i Component-Library-Mobolanle-Adebesin.
+The components can be previewed [here](https://agitated-austin-92807a.netlify.com/?path=/story/button--primary)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## About the Project 
+This project was my introduction to both Storybook and using the react framework. The biggest challenge was transitioning from my understanding of how to manipulate elements using the DOM and OOP to manipulating elements using components instead. Overcoming this challenge allowed me to create components with modifiable styles and functonality. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Directions 
+My goal is to continue to add to components to this library over time so that I can continue to use these components in future projects. I also plan to continue to improve the functionality of the existing components as well. 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributions 
+If you have any suggestions or encounter any issues, please submit an issue [here](https://github.com/MobolanleAdebesin/component-library/issues)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
