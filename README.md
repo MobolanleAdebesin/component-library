@@ -26,7 +26,7 @@ My website can be accessed [here](https://agitated-austin-92807a.netlify.com/?pa
 
 ## Accessing the Library 
 
-In the terminal, use the command npm i Component-Library-Mobolanle-Adebesin.
+In the terminal, use the command: npm i component-library-adebesin.
 The components can be previewed [here](https://agitated-austin-92807a.netlify.com/?path=/story/button--primary)
 
 ## About the Project 
