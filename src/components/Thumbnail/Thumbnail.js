@@ -12,9 +12,10 @@ class Thumbnail extends Component{
     
     }
     render(){
+      if(this.props.type == "blue"){
         return(
-          <div className = "Thumbnail">
-            <div className="Thumbnail-image">
+          <div className = "Thumbnail-blue">
+            <div className="Thumbnail-image-blue">
             </div>
       
             <Hr className = "Thumbnail-hr"></Hr>
@@ -27,6 +28,43 @@ class Thumbnail extends Component{
             </div>  
           </div>
         )
+
+      }
+      if(this.props.type == "clear"){
+        return(
+          <div className = "Thumbnail">
+          <div className="Thumbnail-image">
+          </div>
+    
+          <Hr className = "Thumbnail-hr"></Hr>
+
+          <div className="Thumbnail-Text">
+                  <p className="Thumbnail-Paragraph">Apple Macbook Pro</p>
+                  <Stars className = "Thumbnail-stars"></Stars>
+                  <br/>
+                  <Price className = "Thumbnail-price"></Price>    
+          </div>  
+        </div>
+        )
+      }
+      if(this.props.type == "horizontal"){
+        return(
+          <div className = "Thumbnail-horizontal">
+          <div className="Thumbnail-image-horizontal">
+          </div>
+
+          <div className="Thumbnail-Text-horizontal">
+                  <p className="Thumbnail-Paragraph">Apple Macbook Pro</p>
+                  <Stars className = "Thumbnail-stars-horizontal"></Stars>
+                  <br/>
+                  <Price className = "Thumbnail-price-horizontal"></Price>    
+          </div>  
+        </div>
+        )
+        
+      }
+
+        
     }
 }
 export default Thumbnail;
