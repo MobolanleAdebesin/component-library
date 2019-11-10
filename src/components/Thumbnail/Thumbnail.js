@@ -5,6 +5,11 @@ import {ReactComponent as Macbook} from './Images/laptop.svg'
 import {ReactComponent as Stars} from './Images/stars.svg'
 import {ReactComponent as Price} from './Images/price.svg'
 import { ReactComponent as Hr} from './Images/hr.svg'
+import{ReactComponent as Label} from './Images/label.svg'
+import '../Button/Button.css';
+import Button from '../Button/Button.js';
+import cart from '../Button/cart.svg';
+import heart from '../Button/hearts.svg';
 
 class Thumbnail extends Component{
     constructor(props){
@@ -62,6 +67,62 @@ class Thumbnail extends Component{
         </div>
         )
         
+      }
+      if(this.props.type == "headphones"){
+        return(
+          <div className = "Thumbnail-headphones">
+          <div className="Thumbnail-image-headphones">
+          </div>
+
+          <div className="Thumbnail-Text">
+                  <p className="Thumbnail-Paragraph">Beats Solo 2 On Ear Headphones Black</p>
+                  <Stars className = "Thumbnail-stars"></Stars>
+                  <br/>
+                  <Price className = "Thumbnail-price"></Price>    
+          </div>  
+        </div>
+        )
+        
+      }
+      if(this.props.type == "inline"){
+        return(
+          <div className = "Thumbnail-inline">
+            
+            <div className= "hot-container">
+            <Label className="hot"></Label>
+            <div className="Thumbnail-image-inline"></div>
+            </div>
+            
+
+          <div className="Thumbnail-Text-inline">
+            <div className="paragraph-container">
+            <p className="Thumbnail-Paragraph-inline">Beats Solo 2 On Ear Headphones - Black</p>
+            </div>
+            
+            <div className="product-info-container">
+              <div className="review-container">
+                <Stars className = "Thumbnail-stars-inline"></Stars>
+                <p className= "reviews"> 0 reviews</p>
+                <a href="" className = "link">Submit a Review</a>
+              </div>
+                  
+            <br/>
+
+            <div className="price-container-inline">
+              <Price className = "Thumbnail-price-inline"></Price>  
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam voluptates similique dolor commodi recusandae ducimus ratione dolore in cumque ab assumenda sint quaerat, voluptate vel atque, alias porro magnam quisquam!</p>
+             <div className="Thumbnail-buttons">
+               <Button className = "cart"label="Add To Cart" type="primary-light" icon={cart}/> 
+               <Button  className = "heart"type="primary-light" icon={heart}/>
+
+             </div>
+            </div>
+          </div>
+                   
+          </div>  
+        </div>
+        )
+
       }
 
         
