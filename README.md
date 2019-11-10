@@ -1,6 +1,6 @@
 # Component Library 
 ## Purpose 
-The Purpose of this project was to create a component library of commonly used components including: buttons, thumbnails, and forms. Now, users have access to an array of components that can be reused and modified for varius websites. The design of the components are based on entirely from mockups. 
+The Purpose of this project was to create a component library of commonly used components including: buttons, thumbnails, and forms. Now, users have access to an array of components that can be reused and modified for various websites. The design of the components are based on entirely from mockups. 
 
 
 ## Deployed Site 
